@@ -1,6 +1,11 @@
 
-
 public class Gerente extends Funcionario implements Autenticable {
+
+	private AutenticacionUtil util;
+
+	public Gerente() {
+		this.util = new AutenticacionUtil();
+	}
 
 	public double getBonificacion() {
 		System.out.println("Ejecutando desde Gerente");
@@ -9,16 +14,13 @@ public class Gerente extends Funcionario implements Autenticable {
 
 	@Override
 	public boolean iniciarSesion(String clave) {
-		// TODO Auto-generated method stub
-		return false;
+		return this.util.iniciarSesion(clave);
 	}
 
 	@Override
 	public void setClave(String clave) {
-		// TODO Auto-generated method stub
-		
-	}
+		this.util.setClave(clave);
 
-	
+	}
 
 }

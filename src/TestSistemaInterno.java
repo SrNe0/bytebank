@@ -6,8 +6,9 @@ public class TestSistemaInterno {
 		Administrador admin1 = new Administrador();
 		gerente1.setClave("12345");
 		admin1.setClave("12345");
-		
+
 		sistema.autentica(gerente1);
-		sistema.autentica(admin1);	}
+		sistema.autentica(admin1);
+	}
 
 }
